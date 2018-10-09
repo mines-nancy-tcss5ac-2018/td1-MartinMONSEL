@@ -1,5 +1,5 @@
 def solve(n):
-    "Solve the 16th Euler Problem"
+    "Solve the 16th Euler Problem - Nombre de digits du nombre n"
     S=0
     N=str(n)
     #On transforme le nombre en chaine de caractère

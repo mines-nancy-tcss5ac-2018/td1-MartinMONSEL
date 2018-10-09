@@ -10,7 +10,7 @@ def solve(n):
             incr+=1
         if incr>=50:
             L.append(k)
-    return(len(L),L)
+    return(len(L))
         
     
     
@@ -36,5 +36,9 @@ def Reverse(k):
     for i in range(0,len(K)):
         L+=int(K[i])*(10**i)
     return(L)
+    
+    
+    
+print("Il existe",solve(10000),"nombres de Lychrel inférieurs à 10000")
     
     
