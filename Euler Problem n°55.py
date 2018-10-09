@@ -2,15 +2,15 @@ def solve(n):
     "Solve the 55th Euler Problem -- Nombres de Lychrel inférieurs à n"
     L=[]
     for k in range(1,n):
-        i=k
+        i=k+Reverse(k)
+        
         incr=1
-        while not Palindrome(i) or incr<50:
+        while not Palindrome(i) and incr<50:
             i+=Reverse(i)
             incr+=1
-            print(i)
-        if incr>50:
+        if incr>=50:
             L.append(k)
-    return(L)
+    return(len(L),L)
         
     
     
@@ -21,9 +21,8 @@ def Palindrome(k):
     "Teste si le nombre k est un palindrome"
     K=str(k)
     OK=True
-    if k<10:
-        OK=False
-    while OK and len(K)>1 :
+    
+    while OK and len(K)>=1 :
         if K[0]==K[len(K)-1]:
             K=K[1:len(K)-1]
         else:
